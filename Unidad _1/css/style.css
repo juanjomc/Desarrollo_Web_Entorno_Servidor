@@ -1,0 +1,96 @@
+/* Estilo básico y fuentes de Google */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilo del body */
+body {
+    background-color: #f0f4f8; /* Color de fondo relajante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas del formulario */
+.form-group label {
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los inputs */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Cambia el borde al hacer focus en los campos */
+.form-group input:focus {
+    border-color: #84a9ac;
+    outline: none;
+}
+
+/* Estilo del botón */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #84a9ac;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Efecto hover para el botón */
+.submit-btn:hover {
+    background-color: #3b6978;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+    }
+}
