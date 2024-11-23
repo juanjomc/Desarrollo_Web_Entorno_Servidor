@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Formulario de Producto</h2>
+        <form action="procesar_producto.php" method="post">
+            <div class="form-group">
+                <label for="nombre_producto">Nombre del producto:</label>
+                <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria_producto">Categoría del producto:</label>
+                <select class="form-control" id="categoria_producto" name="categoria_producto" required>
+                    <option value="Categoría A">Categoría A</option>
+                    <option value="Categoría B">Categoría B</option>
+                    <option value="Categoría C">Categoría C</option>
+                    <option value="Categoría D">Categoría D</option>
+                    <!-- Añade más categorías según sea necesario -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cantidad_deseada">Cantidad deseada:</label>
+                <input type="number" class="form-control" id="cantidad_deseada" name="cantidad_deseada" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
