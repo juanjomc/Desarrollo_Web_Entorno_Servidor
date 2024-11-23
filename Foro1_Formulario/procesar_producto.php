@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Informacion del Producto</title>
 </head>
 <body>
@@ -31,11 +31,11 @@ echo "<div class=\"container mt-5\">";
 
 //Comprobamos si se va a agregar un producto nuevo
 
-if (isset($_GET['nombre']) && isset($_GET['categoria']) && isset($_GET['cantidad']) && isset($_GET['precio']) && isset($_GET['agr'])) {
+if (isset($_GET['nombre']) && isset($_GET['categoria']) && isset($_GET['cantidad']) && isset($_GET['precio']) && isset($_GET['act'])) {
     $nombre = $_GET['nombre'];
     $categoria = $_GET['categoria'];
     $cantidad = $_GET['cantidad'];
-    $precio = $_GET['precio'] . ".99";
+    $precio = $_GET['precio'].".99";
     $productos[] = ["nombre" => $nombre, "categoria" => $categoria, "cantidad" => $cantidad, "precio" => $precio];
 }
 
@@ -88,7 +88,7 @@ else
 
         
     } else {
-        echo '<p>El producto con Nombre:'.$nombre_producto.' y categoria:'.$categoria_producto.' no está disponible, puede agregarlo al listado o realizar una nueva busqueda</p>';
+        echo '<p>El producto con <strong>Nombre:</strong> '.$nombre_producto.' y <strong>Categoria:</strong> '.$categoria_producto.' no está disponible, puede agregarlo al listado o realizar una nueva busqueda</p>';
         //Ofrecemos la posibilidad de agregar el producto al listado y pasamos por la url los datos
         echo '<a href="procesar_producto.php?act=agr&nombre='.$nombre_producto.'&categoria='.$categoria_producto.'&cantidad='.$cantidad_deseada.'&precio='.rand(1, 99).'" class="btn btn-primary">Agregar al listado</a>';
 
@@ -101,17 +101,16 @@ else
 echo '<div class="container mt-3">';
 echo '<a href="index.html" class="btn btn-primary">Volver a la búsqueda</a>';
 echo '</div>';
-echo '<div class="container mt-5">';
 
 // Mostrar todos los productos que tenemos en el array
+echo '<div class="container mt-5">';
 echo "<details><summary><h2>Haz clic para ver todo el array con todos los productos</h2></summary>";
 foreach ($productos as $producto) {
-    echo "<p>" . $producto['nombre'] . "<br>" . $producto['categoria'] . "<br>" . $producto['cantidad'] . "<br>" . $producto['precio'] . "€</p>";
+    echo "<p>" . $producto['nombre'] . "<br>" . $producto['categoria'] . "<br>" . $producto['cantidad'] . "<br>" . $producto['precio'] . " €</p>";
 
 }
-
+echo '</div></details>';
 ?>
-</div>
-</details>
+
 </body>
 </html>
